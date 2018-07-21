@@ -10,8 +10,10 @@ import uk.gov.dstl.baleen.types.common.Buzzword;
 
 public class Score extends AbstractRegexAnnotator<Buzzword> {
 
+  private static final String PATTERN = "\\s[0-9]\\s?-\\s?[0-9]\\s";
+
   public Score() {
-    super("TODO", false, 1.0);
+    super(PATTERN, false, 1.0);
   }
 
   @Override
