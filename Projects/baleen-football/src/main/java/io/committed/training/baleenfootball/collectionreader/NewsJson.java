@@ -18,8 +18,28 @@ public class NewsJson extends AbstractConfigurableFolderReader {
 
   @Override
   protected boolean processFile(JCas jCas, Path file) {
-    // TODO Auto-generated method stub
-    return false;
+
+    try {
+      Article article = readFile(file);
+      saveToJCas(jCas, article);
+
+      return true;
+    } catch (Exception e) {
+      getMonitor().warn("Unable to read {}", file, e);
+      return false;
+    }
   }
+
+  private Article readFile(Path file) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  private void saveToJCas(JCas jCas, Article article) {
+    // TODO Auto-generated method stub
+
+  }
+
+
 
 }
