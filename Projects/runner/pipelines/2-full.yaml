@@ -9,7 +9,7 @@ mongo:
 orderer: DependencyGraph
 
 collectionreader:
-  class: io.committed.baleen.addons.collectionreaders.jsonnews.JsonArticleCollectionReader
+  class: io.committed.training.baleenfootball.collectionreader.NewsJson
   folder: ./input
   
 history:

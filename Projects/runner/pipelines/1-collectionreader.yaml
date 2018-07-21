@@ -1,5 +1,5 @@
 collectionreader:
-  class: io.committed.training.baleenworkshop.collectionreaders.JsonArticleCollectionReader
+  class: io.committed.training.baleenfootball.collectionreader.NewsJson
   folder: ./input
   
 consumers:

@@ -9,7 +9,7 @@ mongo:
 orderer: DependencyGraph
 
 collectionreader:
-  class: io.committed.training.baleenworkshop.collectionreaders.JsonArticleCollectionReader
+  class: io.committed.training.baleenfootball.collectionreader.NewsJson
   folder: ./input
   
 history:
@@ -109,6 +109,7 @@ annotators:
   - cleaners.DiscardEntityWithSameId
   - class: relations.RegExRelationshipAnnotator
     pattern: "(:Location:)\\s+(vs?)\\s+(:Location:)"
+    type: versus
     sourceGroup: 1
     valueGroup: 2
     targetGroup: 3
