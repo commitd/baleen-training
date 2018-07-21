@@ -8,8 +8,12 @@ public class NewsJson extends AbstractConfigurableFolderReader {
 
   @Override
   protected boolean isFileIncluded(Path path) {
-    // TODO Auto-generated method stub
-    return false;
+    // The News output is currently a guid
+    // eg 0aa70355-e5bd-473c-9e94-bc2130d4745c
+    // but that seems an unnecessary constraint
+    // so we just return true here to consider any file
+
+    return true;
   }
 
   @Override
