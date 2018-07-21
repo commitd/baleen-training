@@ -1,7 +1,9 @@
 package io.committed.training.baleenfootball.annotators;
 
+import java.util.Collections;
 import java.util.regex.Matcher;
 import org.apache.uima.jcas.JCas;
+import com.google.common.collect.ImmutableSet;
 import uk.gov.dstl.baleen.annotators.regex.helpers.AbstractRegexAnnotator;
 import uk.gov.dstl.baleen.core.pipelines.orderers.AnalysisEngineAction;
 import uk.gov.dstl.baleen.types.common.Buzzword;
@@ -20,8 +22,7 @@ public class Score extends AbstractRegexAnnotator<Buzzword> {
 
   @Override
   public AnalysisEngineAction getAction() {
-    // TODO Auto-generated method stub
-    return null;
+    return new AnalysisEngineAction(Collections.emptySet(), ImmutableSet.of(Buzzword.class));
   }
 
 }
