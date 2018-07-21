@@ -1,0 +1,12 @@
+Kaliningrad,Kaliningrad Stadium
+Kazan, Kazan Arena
+Luzhniki,Luzhniki Stadium
+Spartak,Spartak Stadium
+Nizhny Novgorod,Nizhny Novgorod Stadium
+Rostov, Rostov-on-Don, Rostov Arena
+Saint Petersburg,Saint Petersburg Stadium
+Samara, Samara Arena
+Saransk,Mordovia,Mordovia Arena
+Sochi, Fisht Stadium, Fisht
+Volgograd,Volgograd Arena
+Yekaterinburg, Ekaterinburg Arena

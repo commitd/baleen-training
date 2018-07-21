@@ -1,0 +1,121 @@
+#elasticsearch:
+#  cluster: elasticsearch
+#  host: localhost
+
+mongo:
+  host: localhost
+  db: baleen
+
+orderer: DependencyGraph
+
+collectionreader:
+  class: io.committed.training.baleenworkshop.collectionreaders.JsonArticleCollectionReader
+  folder: ./input
+  
+history:
+  class: uk.gov.dstl.baleen.core.history.noop.NoopBaleenHistory
+
+annotators:
+  - class: cleaners.Blacklist
+    blacklist: 
+    - the
+    - it
+    - a
+    - an
+  - class: gazetteer.File
+    type: Location
+    fileName: data/stadium.txt
+  - class: gazetteer.File
+    type: Person
+    fileName: data/managers.txt       
+  - class: gazetteer.File
+    type: Buzzword
+    fileName: data/football.txt       
+  - cleaners.AddGenderToPerson
+  - cleaners.AddTitleToPerson
+  - cleaners.CleanPunctuation
+  - cleaners.CleanTemporal
+  - cleaners.CorefBrackets
+  - cleaners.CorefCapitalisationAndApostrophe
+  - cleaners.CurrencyDetection
+  - cleaners.EntityInitials
+  - cleaners.MergeAdjacent
+  - cleaners.MergeAdjacentQuantities
+  - cleaners.MergeNationalityIntoEntity
+  - cleaners.NaiveMergeRelations
+  - cleaners.NormalizeOSGB
+  - cleaners.NormalizeTemporal
+  - cleaners.NormalizeWhitespace
+  - cleaners.ReferentToEntity
+  - cleaners.RelationTypeFilter
+  - cleaners.RemoveLowConfidenceEntities
+  - cleaners.RemoveNestedEntities
+  - cleaners.RemoveNestedLocations
+  - cleaners.RemoveOverlappingEntities
+  - cleaners.SplitBrackets
+  - cleaners.Surname
+#  - coreference.SieveCoreference
+  - gazetteer.Country
+  - grammatical.NPAtCoordinate
+  - grammatical.NPElement
+  - grammatical.NPLocation
+  - grammatical.NPOrganisation
+  - grammatical.NPTitleEntity
+  - grammatical.QuantityNPEntity
+  - grammatical.TOLocationEntity
+  - language.OpenNLP
+#  - misc.GenericMilitaryPlatform
+#  - misc.GenericVehicle
+#  - misc.GenericWeapon
+  - misc.MentionedAgain
+#  - misc.NationalityToLocation
+#  - class: misc.OrganisationPersonRole
+#    type: organisationRole
+  - misc.People
+  # misc.Pronouns
+  - regex.Area
+  - regex.BritishArmyUnits
+  - regex.Callsign
+  - regex.CasRegistryNumber
+  - regex.Date
+  - regex.DateTime
+  - regex.Distance
+  - regex.DocumentNumber
+  - regex.Dtg
+  - regex.Email
+  - regex.FlightNumber
+  - regex.Frequency
+  - regex.Hms
+  - regex.IpV4
+  - regex.LatLon
+  - regex.Mgrs
+  - regex.Money
+  - regex.Nationality
+  - regex.Osgb
+  - regex.Postcode
+  - regex.RelativeDate
+  - regex.SocialMediaUsername
+  - regex.TaskForce
+  - regex.Telephone
+  - regex.Time
+  - regex.TimeQuantity
+  - regex.USTelephone
+  - regex.UnqualifiedDate
+  - regex.Url
+  - regex.Volume
+  - regex.Weight
+  - triage.RakeKeywords
+  - cleaners.DiscardRelationWithSameId
+  - cleaners.DiscardEntityWithSameId
+  - class: relations.RegExRelationshipAnnotator
+    pattern: "(:Location:)\\s+(vs?)\\s+(:Location:)"
+    sourceGroup: 1
+    valueGroup: 2
+    targetGroup: 3
+  - io.committed.training.baleenworkshop.annotators.Score
+    
+consumers:
+ - class: analysis.Elasticsearch
+   index: baleen
+  - analysis.Mongo
+  

@@ -1,0 +1,27 @@
+penalty
+scored
+played
+referee
+draw
+kick off
+half time
+full time
+extra time
+penalty
+penalty box
+header
+free kick
+corner kick
+dive
+foul
+red card
+yellow card
+substitution
+offside
+injury
+training
+fans
+final
+semi final, semi-final
+quarter final, quarter final
+play off, play-off

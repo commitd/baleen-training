@@ -1,0 +1,7 @@
+collectionreader:
+  class: io.committed.training.baleenworkshop.collectionreaders.JsonArticleCollectionReader
+  folder: ./input
+  
+consumers:
+  - class: Html5
+    outputFolder: ./output/html

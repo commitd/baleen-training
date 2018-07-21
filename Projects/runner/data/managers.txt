@@ -1,0 +1,32 @@
+Héctor Cúper,Cuper
+Ricardo Gareca,Gareca
+Jorge Sampaoli,Sampaoli
+José Pékerman,Pekerman
+Fernando Hierro,Hierro
+Roberto Martínez,Martínez,Martinez
+Juan Antonio Pizzi, Pizzi
+Juan Carlos Osorio,Osorio
+Hernán Darío Gómez, Gómez, Gomez
+Didier Deschamps, Deschamps
+Hervé Renard,Renard
+Joachim Löw, Löw
+Gernot Rohr, Rohr
+Carlos Queiroz, Queiroz,
+Fernando Santos,Santos
+Adenor Leonardo Bacchi,Bacchi,Tite
+Óscar Ramírez,Ramirez
+Zlatko Dalić,Dalic
+Gareth Southgate,Southgate
+Heimir Hallgrímsson,Hallgrímsson,Hallgrimsson
+Akira Nishino,Nishino
+Bert van Marwijk,van Marwijk,Marwijk
+Åge Hareide,Hareide
+Adam Nawałka,Nawałka
+Stanislav Cherchesov,Cherchesov
+Aliou Cissé,Cissé,Cisse
+Mladen Krstajić,Krstajić,Krstajic
+Shin Tae-yong,Tae-yong
+Janne Andersson,Andersson
+Vladimir Petković,Petković,Petković
+Nabil Maâloul,Maâloul,Maaloul
+Óscar Tabárez,Tabárez,Tabarez

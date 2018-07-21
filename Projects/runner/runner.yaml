@@ -1,0 +1,9 @@
+pipelines:
+ - name: CollectionReader
+   file: ./pipelines/1-collectionreader.yaml
+#  - name: Full
+#    file: ./pipelines/2-full.yaml
+#  - name: Football
+#    file: ./pipelines/3-football.yaml  
+#  - name: Football Score
+#    file: ./pipelines/4-football-score.yaml  
