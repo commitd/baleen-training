@@ -18,8 +18,9 @@ public class Score extends AbstractRegexAnnotator<Buzzword> {
 
   @Override
   protected Buzzword create(JCas jCas, Matcher matcher) {
-    // TODO Auto-generated method stub
-    return null;
+    Buzzword b = new Buzzword(jCas);
+    b.setSubType("score");
+    return b;
   }
 
   @Override
