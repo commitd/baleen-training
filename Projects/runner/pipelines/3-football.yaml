@@ -1,5 +1,5 @@
 #elasticsearch:
-#  cluster: elasticsearch
+#  cluster: docker-cluster
 #  host: localhost
 
 mongo:
@@ -24,13 +24,13 @@ annotators:
     - an
   - class: gazetteer.File
     type: Location
-    fileName: data/stadium.txt
+    fileName: ./data/stadium.txt
   - class: gazetteer.File
     type: Person
-    fileName: data/managers.txt       
+    fileName: ./data/managers.txt
   - class: gazetteer.File
     type: Buzzword
-    fileName: data/football.txt       
+    fileName: ./data/football.txt
   - cleaners.AddGenderToPerson
   - cleaners.AddTitleToPerson
   - cleaners.CleanPunctuation
@@ -113,7 +113,7 @@ annotators:
     valueGroup: 2
     targetGroup: 3
 consumers:
- - class: analysis.Elasticsearch
-   index: baleen
+  - class: analysis.Elasticsearch
+    index: baleen
   - analysis.Mongo
   

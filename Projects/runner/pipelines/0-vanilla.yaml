@@ -1,20 +1,9 @@
-elasticsearch:
-  cluster: docker-cluster
-  host: localhost
-
-mongo:
-  host: localhost
-  db: baleen_news
-
-orderer: DependencyGraph
 
 collectionreader:
-  class: io.committed.baleen.addons.collectionreaders.jsonnews.JsonArticleCollectionReader
-  folder: ./input
+  class: FolderReader
+  folders: 
+  - ./input
   
-history:
-  class: uk.gov.dstl.baleen.core.history.noop.NoopBaleenHistory
-
 annotators:
   - class: cleaners.Blacklist
     blacklist: 
@@ -196,7 +185,6 @@ annotators:
   - cleaners.DiscardEntityWithSameId
 
 consumers:
-  - class: analysis.Elasticsearch
-    index: baleen
-  - analysis.Mongo
+  - class: Html5
+    outputFolder: ./output/html
   
